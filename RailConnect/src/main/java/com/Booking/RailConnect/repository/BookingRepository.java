@@ -1,0 +1,13 @@
+package com.Booking.RailConnect.repository;
+
+import com.Booking.RailConnect.entity.Booking;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface BookingRepository extends JpaRepository<Booking, Long> {
+
+    List<Booking> findByUserId(Long userId);
+
+    // You can add custom query methods if needed
+}
